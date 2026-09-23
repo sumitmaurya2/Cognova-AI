@@ -1,0 +1,11 @@
+services:
+  cognova-backend:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    environment:
+      - WATCHFILES_FORCE_POLLING=true
